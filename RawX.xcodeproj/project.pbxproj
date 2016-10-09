@@ -14,6 +14,12 @@
 		F5D0F5541DA9C5BD005EC566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F5531DA9C5BD005EC566 /* Assets.xcassets */; };
 		F5D0F5571DA9C5BD005EC566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F5551DA9C5BD005EC566 /* LaunchScreen.storyboard */; };
 		F5D0F55F1DA9C625005EC566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F55E1DA9C625005EC566 /* GoogleService-Info.plist */; };
+		F5D0F5641DA9D6AB005EC566 /* PermanentMarker.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F5631DA9D6AB005EC566 /* PermanentMarker.ttf */; };
+		F5D0F5661DA9E5E9005EC566 /* detailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F5651DA9E5E9005EC566 /* detailedView.swift */; };
+		F5D0F5691DA9E67A005EC566 /* contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F5681DA9E67A005EC566 /* contants.swift */; };
+		F5D0F56B1DA9E99A005EC566 /* RoundBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F56A1DA9E99A005EC566 /* RoundBTN.swift */; };
+		F5D0F56D1DA9F0F9005EC566 /* detailedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */; };
+		F5D0F56F1DA9F2E3005EC566 /* detailedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		F5D0F5561DA9C5BD005EC566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D0F5581DA9C5BD005EC566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D0F55E1DA9C625005EC566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5D0F5631DA9D6AB005EC566 /* PermanentMarker.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PermanentMarker.ttf; sourceTree = "<group>"; };
+		F5D0F5651DA9E5E9005EC566 /* detailedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedView.swift; sourceTree = "<group>"; };
+		F5D0F5681DA9E67A005EC566 /* contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contants.swift; sourceTree = "<group>"; };
+		F5D0F56A1DA9E99A005EC566 /* RoundBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBTN.swift; sourceTree = "<group>"; };
+		F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedField.swift; sourceTree = "<group>"; };
+		F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedBTN.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +92,16 @@
 		F5D0F54B1DA9C5BD005EC566 /* RawX */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F5671DA9E667005EC566 /* utilities */,
 				F5D0F5621DA9C8DE005EC566 /* Controller */,
 				F5D0F5611DA9C8D8005EC566 /* View */,
 				F5D0F5601DA9C8D0005EC566 /* Model */,
 				F5D0F54C1DA9C5BD005EC566 /* AppDelegate.swift */,
-				F5D0F54E1DA9C5BD005EC566 /* SigninVC.swift */,
 				F5D0F5501DA9C5BD005EC566 /* Main.storyboard */,
 				F5D0F5531DA9C5BD005EC566 /* Assets.xcassets */,
 				F5D0F5551DA9C5BD005EC566 /* LaunchScreen.storyboard */,
 				F5D0F5581DA9C5BD005EC566 /* Info.plist */,
+				F5D0F5631DA9D6AB005EC566 /* PermanentMarker.ttf */,
 				F5D0F55E1DA9C625005EC566 /* GoogleService-Info.plist */,
 			);
 			path = RawX;
@@ -104,6 +117,10 @@
 		F5D0F5611DA9C8D8005EC566 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F5651DA9E5E9005EC566 /* detailedView.swift */,
+				F5D0F56A1DA9E99A005EC566 /* RoundBTN.swift */,
+				F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */,
+				F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,8 +128,17 @@
 		F5D0F5621DA9C8DE005EC566 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F54E1DA9C5BD005EC566 /* SigninVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F5D0F5671DA9E667005EC566 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F5D0F5681DA9E67A005EC566 /* contants.swift */,
+			);
+			name = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +207,7 @@
 				F5D0F5571DA9C5BD005EC566 /* LaunchScreen.storyboard in Resources */,
 				F5D0F5541DA9C5BD005EC566 /* Assets.xcassets in Resources */,
 				F5D0F5521DA9C5BD005EC566 /* Main.storyboard in Resources */,
+				F5D0F5641DA9D6AB005EC566 /* PermanentMarker.ttf in Resources */,
 				F5D0F55F1DA9C625005EC566 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D0F54F1DA9C5BD005EC566 /* SigninVC.swift in Sources */,
+				F5D0F56F1DA9F2E3005EC566 /* detailedBTN.swift in Sources */,
+				F5D0F5691DA9E67A005EC566 /* contants.swift in Sources */,
+				F5D0F5661DA9E5E9005EC566 /* detailedView.swift in Sources */,
 				F5D0F54D1DA9C5BD005EC566 /* AppDelegate.swift in Sources */,
+				F5D0F56D1DA9F0F9005EC566 /* detailedField.swift in Sources */,
+				F5D0F56B1DA9E99A005EC566 /* RoundBTN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

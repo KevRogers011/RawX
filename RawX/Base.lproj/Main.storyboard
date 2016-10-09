@@ -3,8 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PermanentMarker.ttf">
+            <string>PermanentMarker</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SigninVC-->
         <scene sceneID="tne-QT-ifu">
@@ -17,11 +23,104 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnd-5F-Byi" customClass="detailedView" customModule="RawX" customModuleProvider="target">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RX" translatesAutoresizingMaskIntoConstraints="NO" id="Ndj-LL-bXR">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="245" id="DQf-oZ-8Ig"/>
+                                            <constraint firstAttribute="height" constant="110" id="LyA-ku-xWV"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="hbX-gn-hP9"/>
+                                    <constraint firstItem="Ndj-LL-bXR" firstAttribute="centerX" secondItem="Rnd-5F-Byi" secondAttribute="centerX" id="qSp-WI-eg6"/>
+                                    <constraint firstItem="Ndj-LL-bXR" firstAttribute="centerY" secondItem="Rnd-5F-Byi" secondAttribute="centerY" id="z8V-4q-k9R"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sign in method." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQd-aO-soY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="YcP-gi-Q9c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-UV-lAe">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you have not singed in before an account will automatically be made" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP1-Wk-rLB">
+                                        <frame key="frameInset" minX="8" minY="8" width="354" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="JSY-H8-Mle"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jeo-zt-aCA">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Addres" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="MXo-Ni-fTD" customClass="detailedField" customModule="RawX" customModuleProvider="target">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4eh-pn-tdj" customClass="detailedField" customModule="RawX" customModuleProvider="target">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IU-ru-Z4a" customClass="detailedBTN" customModule="RawX" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.85098039219999999" green="0.019607843140000001" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker" family="Permanent Marker" pointSize="17"/>
+                                        <state key="normal" title="sign in">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-hm-M4P" customClass="RoundBTN" customModule="RawX" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.17647058823529413" green="0.26666666666666666" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="CCd-Ec-rnM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="FAe-rs-6DA"/>
+                                    <constraint firstAttribute="width" constant="150" id="FfH-Es-zlu"/>
+                                    <constraint firstAttribute="height" constant="150" id="YUu-Rs-s7s"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jeo-zt-aCA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="3pd-Ij-5cU"/>
+                            <constraint firstItem="Gjj-UV-lAe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GRJ-Pf-yIu"/>
+                            <constraint firstAttribute="trailing" secondItem="Gjj-UV-lAe" secondAttribute="trailing" id="U0v-IF-TjW"/>
+                            <constraint firstItem="fbZ-hm-M4P" firstAttribute="top" secondItem="AQd-aO-soY" secondAttribute="bottom" constant="40" id="UUa-JB-mvr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jeo-zt-aCA" secondAttribute="trailing" constant="30" id="Xd3-rR-9uM"/>
+                            <constraint firstItem="fbZ-hm-M4P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yhi-rr-Je5"/>
+                            <constraint firstItem="Rnd-5F-Byi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="axc-fv-obB"/>
+                            <constraint firstItem="jeo-zt-aCA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHf-n0-3sD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gjj-UV-lAe" secondAttribute="bottom" id="gPp-al-9o8"/>
+                            <constraint firstItem="AQd-aO-soY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="olb-pL-gcw"/>
+                            <constraint firstItem="jeo-zt-aCA" firstAttribute="top" secondItem="fbZ-hm-M4P" secondAttribute="bottom" constant="40" id="pEI-9q-nTr"/>
+                            <constraint firstItem="Rnd-5F-Byi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rY9-aT-APG"/>
+                            <constraint firstItem="AQd-aO-soY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="th5-z4-g9b"/>
+                            <constraint firstAttribute="trailing" secondItem="Rnd-5F-Byi" secondAttribute="trailing" id="xAO-Zt-GCe"/>
+                            <constraint firstItem="AQd-aO-soY" firstAttribute="top" secondItem="Rnd-5F-Byi" secondAttribute="bottom" constant="20" id="yeQ-9c-8rL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RX" width="700" height="652"/>
+        <image name="f" width="352" height="328"/>
+    </resources>
 </document>
