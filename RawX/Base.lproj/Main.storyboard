@@ -33,6 +33,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.64313725490196072" green="0.062745098039215685" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="hbX-gn-hP9"/>
                                     <constraint firstItem="Ndj-LL-bXR" firstAttribute="centerX" secondItem="Rnd-5F-Byi" secondAttribute="centerX" id="qSp-WI-eg6"/>
@@ -80,6 +81,9 @@
                                         <state key="normal" title="sign in">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SigninTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kal-qV-GbR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -92,6 +96,9 @@
                                     <constraint firstAttribute="height" constant="150" id="YUu-Rs-s7s"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBTNtapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1K-hQ-g5F"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,6 +120,10 @@
                             <constraint firstItem="AQd-aO-soY" firstAttribute="top" secondItem="Rnd-5F-Byi" secondAttribute="bottom" constant="20" id="yeQ-9c-8rL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailfield" destination="MXo-Ni-fTD" id="5mY-Lr-lDH"/>
+                        <outlet property="pwdfield" destination="4eh-pn-tdj" id="Zza-d9-KDd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

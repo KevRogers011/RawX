@@ -40,6 +40,7 @@
 		F5D0F56A1DA9E99A005EC566 /* RoundBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBTN.swift; sourceTree = "<group>"; };
 		F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedField.swift; sourceTree = "<group>"; };
 		F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedBTN.swift; sourceTree = "<group>"; };
+		F5D0F5701DAA9B23005EC566 /* RawX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RawX.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		F5D0F54B1DA9C5BD005EC566 /* RawX */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F5701DAA9B23005EC566 /* RawX.entitlements */,
 				F5D0F5671DA9E667005EC566 /* utilities */,
 				F5D0F5621DA9C8DE005EC566 /* Controller */,
 				F5D0F5611DA9C8D8005EC566 /* View */,
@@ -178,6 +180,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = LYLQ8GH6Z4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -397,6 +404,7 @@
 			baseConfigurationReference = 3F96BA820CCF3603AF9A21C5 /* Pods-RawX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RawX/RawX.entitlements;
 				DEVELOPMENT_TEAM = LYLQ8GH6Z4;
 				INFOPLIST_FILE = RawX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -411,6 +419,7 @@
 			baseConfigurationReference = 35740664FB035A98D7CC43DC /* Pods-RawX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RawX/RawX.entitlements;
 				DEVELOPMENT_TEAM = LYLQ8GH6Z4;
 				INFOPLIST_FILE = RawX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
