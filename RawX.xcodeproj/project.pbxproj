@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1061D4D60D025106FEEA6BF /* Pods_RawX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C279D851FA8F43AC436DDF7 /* Pods_RawX.framework */; };
 		F5D0F54D1DA9C5BD005EC566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F54C1DA9C5BD005EC566 /* AppDelegate.swift */; };
-		F5D0F54F1DA9C5BD005EC566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F54E1DA9C5BD005EC566 /* ViewController.swift */; };
+		F5D0F54F1DA9C5BD005EC566 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F54E1DA9C5BD005EC566 /* SigninVC.swift */; };
 		F5D0F5521DA9C5BD005EC566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F5501DA9C5BD005EC566 /* Main.storyboard */; };
 		F5D0F5541DA9C5BD005EC566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F5531DA9C5BD005EC566 /* Assets.xcassets */; };
 		F5D0F5571DA9C5BD005EC566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F5551DA9C5BD005EC566 /* LaunchScreen.storyboard */; };
+		F5D0F55F1DA9C625005EC566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5D0F55E1DA9C625005EC566 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35740664FB035A98D7CC43DC /* Pods-RawX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawX.release.xcconfig"; path = "Pods/Target Support Files/Pods-RawX/Pods-RawX.release.xcconfig"; sourceTree = "<group>"; };
+		3F96BA820CCF3603AF9A21C5 /* Pods-RawX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RawX/Pods-RawX.debug.xcconfig"; sourceTree = "<group>"; };
+		9C279D851FA8F43AC436DDF7 /* Pods_RawX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D0F5491DA9C5BD005EC566 /* RawX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D0F54C1DA9C5BD005EC566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5D0F54E1DA9C5BD005EC566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5D0F54E1DA9C5BD005EC566 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		F5D0F5511DA9C5BD005EC566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5D0F5531DA9C5BD005EC566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D0F5561DA9C5BD005EC566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D0F5581DA9C5BD005EC566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D0F55E1DA9C625005EC566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1061D4D60D025106FEEA6BF /* Pods_RawX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32B6C45F347D14A86DC2F12E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F96BA820CCF3603AF9A21C5 /* Pods-RawX.debug.xcconfig */,
+				35740664FB035A98D7CC43DC /* Pods-RawX.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		35A9F1797CE3B9DFD1B83CBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C279D851FA8F43AC436DDF7 /* Pods_RawX.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5D0F5401DA9C5BD005EC566 = {
 			isa = PBXGroup;
 			children = (
 				F5D0F54B1DA9C5BD005EC566 /* RawX */,
 				F5D0F54A1DA9C5BD005EC566 /* Products */,
+				32B6C45F347D14A86DC2F12E /* Pods */,
+				35A9F1797CE3B9DFD1B83CBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		F5D0F54B1DA9C5BD005EC566 /* RawX */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F5621DA9C8DE005EC566 /* Controller */,
+				F5D0F5611DA9C8D8005EC566 /* View */,
+				F5D0F5601DA9C8D0005EC566 /* Model */,
 				F5D0F54C1DA9C5BD005EC566 /* AppDelegate.swift */,
-				F5D0F54E1DA9C5BD005EC566 /* ViewController.swift */,
+				F5D0F54E1DA9C5BD005EC566 /* SigninVC.swift */,
 				F5D0F5501DA9C5BD005EC566 /* Main.storyboard */,
 				F5D0F5531DA9C5BD005EC566 /* Assets.xcassets */,
 				F5D0F5551DA9C5BD005EC566 /* LaunchScreen.storyboard */,
 				F5D0F5581DA9C5BD005EC566 /* Info.plist */,
+				F5D0F55E1DA9C625005EC566 /* GoogleService-Info.plist */,
 			);
 			path = RawX;
+			sourceTree = "<group>";
+		};
+		F5D0F5601DA9C8D0005EC566 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F5D0F5611DA9C8D8005EC566 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F5D0F5621DA9C8DE005EC566 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D0F55B1DA9C5BD005EC566 /* Build configuration list for PBXNativeTarget "RawX" */;
 			buildPhases = (
+				55A3BC5FA9E49EC13A56F241 /* [CP] Check Pods Manifest.lock */,
 				F5D0F5451DA9C5BD005EC566 /* Sources */,
 				F5D0F5461DA9C5BD005EC566 /* Frameworks */,
 				F5D0F5471DA9C5BD005EC566 /* Resources */,
+				4001FC48DEEFD0A46F05B796 /* [CP] Embed Pods Frameworks */,
+				2065907F4AF63D674DD8FBC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +150,7 @@
 				TargetAttributes = {
 					F5D0F5481DA9C5BD005EC566 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LYLQ8GH6Z4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,17 +181,66 @@
 				F5D0F5571DA9C5BD005EC566 /* LaunchScreen.storyboard in Resources */,
 				F5D0F5541DA9C5BD005EC566 /* Assets.xcassets in Resources */,
 				F5D0F5521DA9C5BD005EC566 /* Main.storyboard in Resources */,
+				F5D0F55F1DA9C625005EC566 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2065907F4AF63D674DD8FBC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RawX/Pods-RawX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4001FC48DEEFD0A46F05B796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RawX/Pods-RawX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55A3BC5FA9E49EC13A56F241 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5D0F5451DA9C5BD005EC566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D0F54F1DA9C5BD005EC566 /* ViewController.swift in Sources */,
+				F5D0F54F1DA9C5BD005EC566 /* SigninVC.swift in Sources */,
 				F5D0F54D1DA9C5BD005EC566 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,11 +362,13 @@
 		};
 		F5D0F55C1DA9C5BD005EC566 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F96BA820CCF3603AF9A21C5 /* Pods-RawX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LYLQ8GH6Z4;
 				INFOPLIST_FILE = RawX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevinrogers.rRwX.RawX;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinrogers.RawX.RawX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -270,11 +376,13 @@
 		};
 		F5D0F55D1DA9C5BD005EC566 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35740664FB035A98D7CC43DC /* Pods-RawX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LYLQ8GH6Z4;
 				INFOPLIST_FILE = RawX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevinrogers.rRwX.RawX;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinrogers.RawX.RawX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -299,6 +407,7 @@
 				F5D0F55D1DA9C5BD005EC566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
