@@ -1,5 +1,5 @@
 //
-//  post cell.swift
+//  postcell.swift
 //  RawX
 //
 //  Created by Kevin Rogers on 10/13/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class post_cell: UITableViewCell {
+class postcell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

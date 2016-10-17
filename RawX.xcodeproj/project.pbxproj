@@ -20,6 +20,10 @@
 		F5D0F56B1DA9E99A005EC566 /* RoundBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F56A1DA9E99A005EC566 /* RoundBTN.swift */; };
 		F5D0F56D1DA9F0F9005EC566 /* detailedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */; };
 		F5D0F56F1DA9F2E3005EC566 /* detailedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */; };
+		F5D0F5741DAAEF89005EC566 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F5731DAAEF89005EC566 /* FeedVC.swift */; };
+		F5D0F5761DADB6F2005EC566 /* circleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F5751DADB6F2005EC566 /* circleview.swift */; };
+		F5D0F5781DB06C70005EC566 /* postcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F5771DB06C70005EC566 /* postcell.swift */; };
+		F5D0F57B1DB31884005EC566 /* Dataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0F57A1DB31884005EC566 /* Dataservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedField.swift; sourceTree = "<group>"; };
 		F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedBTN.swift; sourceTree = "<group>"; };
 		F5D0F5701DAA9B23005EC566 /* RawX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RawX.entitlements; sourceTree = "<group>"; };
+		F5D0F5731DAAEF89005EC566 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		F5D0F5751DADB6F2005EC566 /* circleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circleview.swift; sourceTree = "<group>"; };
+		F5D0F5771DB06C70005EC566 /* postcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postcell.swift; sourceTree = "<group>"; };
+		F5D0F57A1DB31884005EC566 /* Dataservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 		F5D0F54B1DA9C5BD005EC566 /* RawX */ = {
 			isa = PBXGroup;
 			children = (
+				F5D0F5791DB3184C005EC566 /* Services */,
 				F5D0F5701DAA9B23005EC566 /* RawX.entitlements */,
 				F5D0F5671DA9E667005EC566 /* utilities */,
 				F5D0F5621DA9C8DE005EC566 /* Controller */,
@@ -123,6 +132,8 @@
 				F5D0F56A1DA9E99A005EC566 /* RoundBTN.swift */,
 				F5D0F56C1DA9F0F9005EC566 /* detailedField.swift */,
 				F5D0F56E1DA9F2E3005EC566 /* detailedBTN.swift */,
+				F5D0F5751DADB6F2005EC566 /* circleview.swift */,
+				F5D0F5771DB06C70005EC566 /* postcell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D0F54E1DA9C5BD005EC566 /* SigninVC.swift */,
+				F5D0F5731DAAEF89005EC566 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -141,6 +153,14 @@
 				F5D0F5681DA9E67A005EC566 /* contants.swift */,
 			);
 			name = utilities;
+			sourceTree = "<group>";
+		};
+		F5D0F5791DB3184C005EC566 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F5D0F57A1DB31884005EC566 /* Dataservice.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +199,7 @@
 					F5D0F5481DA9C5BD005EC566 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = LYLQ8GH6Z4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -274,10 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D0F5781DB06C70005EC566 /* postcell.swift in Sources */,
 				F5D0F54F1DA9C5BD005EC566 /* SigninVC.swift in Sources */,
 				F5D0F56F1DA9F2E3005EC566 /* detailedBTN.swift in Sources */,
+				F5D0F5761DADB6F2005EC566 /* circleview.swift in Sources */,
 				F5D0F5691DA9E67A005EC566 /* contants.swift in Sources */,
 				F5D0F5661DA9E5E9005EC566 /* detailedView.swift in Sources */,
+				F5D0F5741DAAEF89005EC566 /* FeedVC.swift in Sources */,
+				F5D0F57B1DB31884005EC566 /* Dataservice.swift in Sources */,
 				F5D0F54D1DA9C5BD005EC566 /* AppDelegate.swift in Sources */,
 				F5D0F56D1DA9F0F9005EC566 /* detailedField.swift in Sources */,
 				F5D0F56B1DA9E99A005EC566 /* RoundBTN.swift in Sources */,

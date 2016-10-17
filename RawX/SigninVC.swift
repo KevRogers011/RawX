@@ -10,17 +10,22 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SigninVC: UIViewController {
     @IBOutlet weak var emailfield: detailedField!
     @IBOutlet weak var pwdfield: detailedField!
 
     override func viewDidLoad() {
+      
+   }
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-   
+        if let _ = KeychainWrapper.standard.string(forKey: key_uid){
+            performSegue(withIdentifier: "ToFeed", sender: nil)
     }
-
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,15 +55,27 @@ class SigninVC: UIViewController {
                 
             }else{
                 print("kev: Successfully authenticated with Firebase")
+                
+                if let user = user{
+                    let UserData = ["provider": credential.provider]
+    self.completeSignIn(id: user.uid, userData: UserData)
+                }
+                
+            
             }
         })
     }
 
     @IBAction func SigninTapped(_ sender: AnyObject) {
+        
         if let email = emailfield.text, let pwd = pwdfield.text{
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
-                    print("kev: email user authenticated with Forebase")
+                    print("kev: email user authenticated with Firebase")
+                    if let user = user {
+                        let userData = ["Provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)}
+                    
                 }else{
                     FIRAuth.auth()?.createUser(withEmail:email, password: pwd, completion: { (user, error) in
                         if error == nil{
@@ -66,12 +83,22 @@ class SigninVC: UIViewController {
                         }
                         else{
                             print("Kev: Successfully authenticated with Firebase")
+                            if let user = user{
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                            }
+                            
                         }
                     })
                 }
             })
             
         }
+    }
+    func completeSignIn(id:String, userData: Dictionary<String, String>) {
+        DataService.ds.createfirbaseUser(uid: id, userData: userData)
+        KeychainWrapper.standard.set(id, forKey: key_uid)
+        performSegue(withIdentifier: "ToFeed", sender: nil)
     }
 }
 
